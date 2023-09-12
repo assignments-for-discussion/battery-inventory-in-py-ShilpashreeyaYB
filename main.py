@@ -10,7 +10,7 @@ def count_batteries_by_health(present_capacities):
   for i in soh:
     if i>80:
       healthy+=1
-    elif i>=80 and i<=63:
+    elif i>=63 and i<=80:
       exchange+=1
     elif i<63:
       failed+=1
