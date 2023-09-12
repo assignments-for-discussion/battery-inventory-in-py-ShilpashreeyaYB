@@ -1,5 +1,18 @@
 
 def count_batteries_by_health(present_capacities):
+  soh=[]
+  healthy=0
+  exchange=0
+  failed=0
+  for i in present_capacities:
+    soh.append(100*i/120)
+  for i in soh:
+    if soh>80 and soh<100:
+      healthy+=1
+    elif soh>=80 and soh<=63:
+      exchange+=1
+    elif soh<63:
+      failed+=1
   return {
     "healthy": 0,
     "exchange": 0,
