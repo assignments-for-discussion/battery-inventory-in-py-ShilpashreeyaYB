@@ -14,9 +14,9 @@ def count_batteries_by_health(present_capacities):
     elif i<63:
       failed+=1
   return {
-    "healthy": 0,
-    "exchange": 0,
-    "failed": 0
+    "healthy": healthy,
+    "exchange": exchange,
+    "failed": failed
   }
 
 
